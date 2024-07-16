@@ -1,0 +1,297 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    
+    font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+  
+    
+}
+body{
+  background-color:#020403;
+}
+
+h1{
+    color:#ffffff ;
+    text-align: center;
+}
+nav{
+    width:100%;
+    background-color: #020403;
+    display: flex;
+    justify-content:space-between;
+    padding: 1px;
+    align-items: center;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.3), 0 0 40px rgba(0,0,0,0.1) inset;
+}
+nav img{
+  width: 100px;
+  height: 50px;
+  object-fit: cover;
+  
+}
+li{
+    display: inline;
+    color: white;
+    margin-right: 20px;
+    font-size: 1.1rem;
+}
+.menu{
+    
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    cursor:pointer;
+
+    
+}
+
+.menu i, p{
+    font-size: 1.1rem;
+    color: #ffffff;
+}
+
+.input-group {
+    position: relative;
+    display: flex;
+    width: 400px;
+    background-color: #101415;
+    padding:0.5rem;
+    border-radius: 22px;
+ 
+
+    
+  }
+  .input-group input {
+    margin-left: 10px;
+    width:inherit;
+    height: 20px;
+    border: none;
+    outline: none;
+                
+    background-color: #101415;
+    color:#DC281E;
+    font-weight: bold;
+  
+    
+  }
+  .search{
+    
+    text-align: center;
+    width: 14%;
+    border-radius: 20%;
+  }
+
+  .input-group .fa {
+    left: 10px; 
+    top: 50%;
+    transform: translateY(-50%);
+  }
+ 
+  .menubar-side{
+    display: none;
+    
+    transition: 0.5s;
+    position: absolute;
+    top: 10%;
+    opacity: 0;
+    background-color: #020403;
+    
+    
+  }
+  .box{
+    
+    gap: 2rem;
+    display: flex;
+    outline: 1px solid white;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding:1rem;
+  
+  }
+  .card-3{
+    margin-top:-30% ;
+    text-align: center;
+    height: 500px;
+    width: 400px;
+   
+  }
+  .card-2{
+    text-align: center;
+    height: 600px;
+    width: 400px;
+    
+  }
+  .card-1{
+    text-align: center;
+    height: 300px;
+    width: 400px;
+  }
+  .card-4{
+    
+      height: 220px;
+      width: 400px;
+      
+  }
+  .box h2{
+    display: block;
+    text-align: start;
+    color: #DC281E;
+  }
+  .box li {
+    text-decoration: underline;
+    text-align: start;
+    margin-left: 1rem;
+    display: block;
+    line-height: 4rem;
+    cursor: pointer;
+  }
+  
+  .box p{
+    margin-top: 0.3rem;
+    margin-left: 0.5rem;
+    color: gold;
+    text-align: start;
+  
+  }
+
+
+.container{
+  margin-top: 0.1rem;
+  position: relative;
+  overflow-x: hidden;
+  width: 100%;
+  height: 90vh;
+
+}
+.container .slider{
+  
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 500%;
+  height: 100%;
+  animation: ani 12s  infinite linear;
+  
+}
+.container .slider .slide{
+
+  position: relative;
+  width: 20%;
+  height: 100%;
+  float: left;
+}
+.container .slider .slide .caption{
+  position: absolute;
+  bottom: 60px;
+  left: 60px;
+  right: 60px;
+  padding: 30px;
+  background: rgba(0,0,0,0.5);
+  box-sizing: border-box;
+
+}
+.container .slider .slide .caption h2{
+  margin: 0;
+  padding: 0;
+  color: red;
+  font-size: 30px;
+}  
+
+
+.container .slider .slide.movie1{
+  background-image:url("https://akm-img-a-in.tosshub.com/indiatoday/images/story/202402/silambarasan-025210209-16x9_0.jpg?VersionId=fEf.0TIw2UXIOhrgvJ9YOCrJkr3Hqd1Q&size=690:388") ;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.container .slider .slide.movie2{
+  background-image:url("https://static.toiimg.com/thumb/msid-106421565,width-400,resizemode-4/106421565.jpg") ;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.container .slider .slide.movie3{
+  background-image:url("https://static1.srcdn.com/wordpress/wp-content/uploads/2024/06/a-split-image-of-eddie-brock-looking-out-a-window-and-venom-smirking-in-venom-the-last-dance.jpg?q=70&fit=crop&w=780&h=433&dpr=1") ;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.container .slider .slide.movie4{
+  background-image: url("https://static1.srcdn.com/wordpress/wp-content/uploads/2022/10/terrifier-3-art-the-clown.jpg?q=49&fit=crop&w=780&h=433&dpr=2");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@keyframes ani {
+  0%{
+    left: 0;
+  }
+  20%{
+    left:0;
+  }
+  25%{
+    left:-100%;
+  }
+  45%{
+    left:-100%;
+  }
+  50%{
+    left: -200%;
+
+  }
+  70%{
+    left: -200%;
+  }
+  75%{
+    left: -300%;
+  }
+  95%{
+    left:-300%
+  }
+  100%{
+    left:-400%
+  }
+}
+
+
+.container2 h2{
+   margin: 2rem;
+   color: #DC281E;
+}
+.section2{
+  display: flex;
+  
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+
+}
+.moviecard{
+  border-radius: 20px;
+  padding: 1rem;
+  width: 20%;
+
+  background-color:#101415;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  
+
+}
+.moviestuff{
+  background-color: #020403;
+}
+ .moviestuff p{
+  font-weight: 100;
+  
+ }
+
+
+.moviecard img{
+  height: 40vh;
+  width: 100%;
+  
+}
+.moviestuff h2{
+
+  padding: 0%;
+  margin: 0%;
+}
+.container3{
+  height: 90vh;
+}

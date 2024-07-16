@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="adminhome.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css" integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <body>
+      <style>
+        body{
+          background-image: url("mr.jpg");
+          color: gold;
+        }
+      </style>
+        
+    <div class="container">  
+        <form id="contact" action="adminhome.php" method="post">
+          <h3> UPLOAD</h3>
+          <h4>LOAD THE CONTENT</h4>
+          <fieldset>
+          Movie name:<input placeholder="Movie name" name="name" type="text" required autofocus>
+          </fieldset>
+          <fieldset>
+            <div class="rateyo" id= "rating"
+            data-rateyo-rating="4"
+            data-rateyo-num-stars="5"
+            data-rateyo-score="3">
+            </div>
+            <span class='result'>0</span>
+    <input type="hidden" name="rating">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
+<script>
+
+
+    $(function () {
+        $(".rateyo").rateYo().on("rateyo.change", function (e, data) {
+            var rating = data.rating;
+            $(this).parent().find('.score').text('score :'+ $(this).attr('data-rateyo-score'));
+            $(this).parent().find('.result').text('rating :'+ rating);
+            $(this).parent().find('input[name=rating]').val(rating); //add rating value to input field
+        });
+    });
+
+</script>
+</fieldset>
+        
+          <fieldset>
+            <input type="file" name="image" required class="form">
+          </fieldset>
+          <fieldset>
+            StoryLine:<textarea placeholder="Type the story line here...." name="story"  required></textarea>
+          </fieldset>
+          <fieldset>
+            <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+          </fieldset>
+         
+        </form>
+      </div>
+        
+    </body> 
+</html>
